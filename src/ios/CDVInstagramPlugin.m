@@ -91,7 +91,7 @@ static NSString *InstagramId = @"com.burbn.instagram";
         NSLog(@"open asset in instagram");
         
 		NSString *localIdentifierEscaped = [localIdentifier stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-		NSURL *instagramShareURL   = [NSURL URLWithString:[NSString stringWithFormat:@"instagram://library?OpenInEditor=0&LocalIdentifier=%@", localIdentifierEscaped]];
+		NSURL *instagramShareURL   = [NSURL URLWithString:[NSString stringWithFormat:@"instagram://library?&LocalIdentifier=%@", localIdentifierEscaped]];
 		
 		[[UIApplication sharedApplication] openURL:instagramShareURL];
 
